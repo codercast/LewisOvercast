@@ -392,6 +392,7 @@ h3 a {
 @media only screen and (max-width: 500px) {
   .master-container {
     flex-direction: column;
+    max-width: 100%;;
   }
 
   .contact {
@@ -499,10 +500,9 @@ h3 a {
 .column-portfolio {
   display: flex;
   flex-direction: column;
-  flex-basis: 100%;
   flex: 1;
   color: #fff;
-  margin: 50px;
+
 }
 
 .row-portfolio {
@@ -556,6 +556,8 @@ h3 a {
 .overlay {
   background-color: #a296ca;
   border-radius: 5rem;
+  height: 5rem;
+  width: auto;
 }
 
 .overlay:hover {
