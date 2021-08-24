@@ -390,17 +390,15 @@ h3 a {
   font-size: 1.5rem;
 }
 
-@media (max-width: 720px) {
-  .master-container {
+@media only screen and (max-width: 500px) {
+  html {
     flex-direction: column;
   }
 
-  .master-container .row { 
-      flex-direction: column;
-  }
-
-  .master-container .row-portfolio {
+  .contact {
+    display: flex;
     flex-direction: column;
+
   }
 }
 
@@ -436,7 +434,7 @@ h3 a {
 }
 .nav-links a:hover,
 .nav-links a:active  {
-  color: #a296ca;
+  color: #55497c;
 }
 
 /* CONTAINER */
@@ -511,7 +509,6 @@ h3 a {
   width: 100%;
   text-align: center;
   align-self: center;
-  padding: 25px;
 }
 
 .portfolio  {
@@ -538,7 +535,6 @@ h3 a {
 .contact {
     display: flex;
     flex-direction: row;
-    flex-basis: 100%;
     background-color: #1d161e;
     background-image: linear-gradient(
       to top, transparent, #4c1c46
@@ -549,16 +545,27 @@ h3 a {
     justify-content: space-evenly;
     padding-bottom: 200px;
     padding-top: 200px;
+    flex-wrap: wrap;
 }
 
 .contactimg {
   height: 100px;
   width: auto;
+  color: #FFF;
+}
+
+.overlay {
+  background-color: #a296ca;
+  border-radius: 200px;
+}
+
+.overlay:hover {
+  background-color: rgb(255, 255, 255);
 }
 
 footer {
   text-align: center;
-padding: 20px;
+  padding: 20px;
   background-color: #000;
   color: #fff;
 }
