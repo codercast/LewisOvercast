@@ -399,6 +399,11 @@ h3 a {
     flex-direction: column;
 
   }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* HEADER & NAV STYLES */
@@ -497,7 +502,6 @@ h3 a {
   flex-basis: 100%;
   flex: 1;
   color: #fff;
-  font-size: 14px;
   margin: 50px;
 }
 
@@ -514,18 +518,17 @@ h3 a {
   display: flex;
   flex-direction: row;
   text-align: center;
-  flex: 3;
   justify-content: center;
   color: #fff;
 }
 
 .portfolio p {
-  font-size: 14px;
+  font-size: 1.5rem;
 }
 
 .codedanger {
-  width: 400px;
-  height: 190px;
+  width: 25rem;
+  height: 12rem;
   box-shadow: 2px 5px 10px #000;
 }
 
@@ -546,13 +549,13 @@ h3 a {
 }
 
 .contactimg {
-  height: 100px;
+  height: 5rem;
   width: auto;
 }
 
 .overlay {
   background-color: #a296ca;
-  border-radius: 200px;
+  border-radius: 5rem;
 }
 
 .overlay:hover {
