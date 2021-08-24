@@ -364,7 +364,6 @@ li {
 li::before {
   list-style: none;
   content: "★";
-  padding-right: 5px;
 }
 
 a:hover {
@@ -391,7 +390,7 @@ h3 a {
 }
 
 @media only screen and (max-width: 500px) {
-  html {
+  .master-container {
     flex-direction: column;
   }
 
@@ -499,7 +498,7 @@ h3 a {
   flex: 1;
   color: #fff;
   font-size: 14px;
-  padding: 25px;
+  margin: 50px;
 }
 
 .row-portfolio {
@@ -542,16 +541,13 @@ h3 a {
       to bottom, transparent, #000
     ), url("galaxyblue.jpg");
     background-size: cover;
+    padding: 200px 0;
     justify-content: space-evenly;
-    padding-bottom: 200px;
-    padding-top: 200px;
-    flex-wrap: wrap;
 }
 
 .contactimg {
   height: 100px;
   width: auto;
-  color: #FFF;
 }
 
 .overlay {
