@@ -348,57 +348,65 @@
   
   /* ====================================================== */ 
 
-  @media (max-width: 720px) {
-    .master-container {
-      flex-direction: column;
-    }
-
-    .master-container .row { 
-        flex-direction: column;
-    }
-}
-
+/* GLOBAL STYLES */
 html {
     color: #1d161e;
     font-size: 18px;
     font-family: 'Tahoma';
-    letter-spacing: 1px;;
-    
-}
-  
-.propic {
-    width: 250px;
-    height: auto;
-    border-radius: 10%;
-    border: 4px solid #a296ca;
-    box-shadow: 2px 5px 10px #000;
-}
-
-.about-me-container {
-    display: flex;
+    letter-spacing: 1px;
     text-align: center;
-    background-image: linear-gradient(
-      to bottom, transparent, #4c1c46
-    ), url("purple-galaxy-wallpaper.jpg");
-  background-size: cover;
-  color: #fff;
-  align-self: center;
-  text-shadow: 2px 2px 0px #000;
-  padding: 80px;
 }
 
-.propicbox {
-
+li {
+  display: inline;
 }
 
-/* HEADER STYLES */
+li::before {
+  list-style: none;
+  content: "★";
+  padding-right: 5px;
+}
+
+a:hover {
+  color: #d9cdff;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  color: #9da0ff;
+  font-size: 1.8rem;
+}
+
+h2 a:hover {
+  color:#9da0ff;
+}
+
+h3 a {
+  color: #a296ca;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 720px) {
+  .master-container {
+    flex-direction: column;
+  }
+
+  .master-container .row { 
+      flex-direction: column;
+  }
+}
+
+/* HEADER & NAV STYLES */
 .header {
-  background-color: #988bc296;
+  background-color: #000;
+  box-shadow: 2px 5px 10px #000;
   color: #a296ca;
   position: fixed;
   width: 100%;
-  display: flex;
-  justify-content: space-evenly;
 }
 
 .header-nav > li {
@@ -406,11 +414,15 @@ html {
   margin-left: 1em;
 }
 .header-nav > li ~ li {
-  border-left: 1px solid #4c1c46;
+  border-left: 1px solid #a296ca;
   padding-left: 1em;
 }
+
+.header-nav > li::before {
+  content:"";
+}
 .header-nav a {
-  color: #a296ca;
+  color: rgb(224, 224, 224);
 }
 .nav-links a {
   font-size: 0.8rem;
@@ -420,42 +432,32 @@ html {
 }
 .nav-links a:hover,
 .nav-links a:active  {
-  color: #4c1c46;
-}
-.header-nav > li:first-child a {
-  color: #4c1c46;
-}
-.header-nav > li:first-child a:hover {
   color: #a296ca;
 }
+
+/* CONTAINER */
 
 .master-container {
     background-color: #4c1c46;
 
 }  
 
+/* ABOUT ME STYLES */
 
-.propicbox h2 {
-        margin-top: -20px;
-        text-indent: 100px;
-        color: #a296ca;
-        text-shadow: 2px 2px 0px #4c1c46;
+.propic {
+  width: 250px;
+  height: auto;
+  border-radius: 10%;
+  border: 4px solid #a296ca;
+  box-shadow: 2px 5px 10px #000;
+  align-self: center;
 }
 
-.top-banner {
-    background-image: linear-gradient(
-        to bottom, transparent, #4c1c46
-      ), url("purple-galaxy-wallpaper.jpg");
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    color: #fff;
-    font-size: 5vh;
-    text-shadow: 2px 2px 0px #000;
-    font-family: 'Tahoma';
-    padding-bottom: 80px;
-    justify-content: center;
 
+.front-end {
+        margin-top: -20px;
+        color: #a296ca;
+        text-shadow: 2px 2px 0px #4c1c46;
 }
 
 .row {
@@ -463,8 +465,17 @@ html {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+    text-align: center;
+    background-image: linear-gradient(
+      to bottom, transparent, #4c1c46
+    ), url("purple-galaxy-wallpaper.jpg");
+  background-size: cover;
+  color: #fff;
+  align-self: center;
+  text-shadow: 2px 2px 0px #000;
+  padding: 80px;
   }
-  
+
   .column {
     display: flex;
     flex-direction: column;
@@ -473,31 +484,48 @@ html {
     color: #fff;
   }
 
-div .technical {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
+/* PORTFOLIO STYLES */
+  .row-title {
+      display: block;
+      width: 100%;
+  }
+
+.column-portfolio {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  color: #fff;
+  font-size: 14px;
+  padding: 25px;
 }
 
-div .portfolio  {
+.row-portfolio {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  width: 100%;
   text-align: center;
-  flex: 2;
+  align-self: center;
+  padding: 25px;
+}
+
+.portfolio  {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  flex: 3;
   justify-content: center;
   color: #fff;
-  padding-top: 50px;
 }
 
-div .portfolio p {
+.portfolio p {
   font-size: 14px;
 }
-div .portfolio div {
-    padding: 0 20px;
-}
 
-div .contact {
+/* CONTACT STYLES */
+
+.contact {
     display: flex;
     flex-direction: row;
     flex-basis: 100%;
@@ -510,43 +538,13 @@ div .contact {
     background-size: cover;
     justify-content: space-evenly;
     padding-bottom: 200px;
-    padding-top: 50px;
-}
-
-h1, h2, h3 {
-    text-align: center;
-}
-
-li {
-    display: inline;
-}
-
-li ~ li {
-  border-left: 1px dotted #a296ca;
-  padding: 2px 10px;
+    padding-top: 200px;
 }
 
 .codedanger {
   width: 400px;
-  height: auto;
+  height: 190px;
   box-shadow: 2px 5px 10px #000;
-}
-
-h3 a {
-  color: #a296ca;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #d9cdff;
-}
-h2 {
-  color: #9da0ff;
-  font-size: 30px;
-}
-
-h2 a:hover {
-  color:#9da0ff;
 }
 
 .contactimg {
@@ -561,12 +559,4 @@ padding: 20px;
   color: #fff;
 }
 
-.title {
-padding-top: 50px;
-
-}
-
-img:hover {
-  background-color: #fff;
-}
 
