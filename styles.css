@@ -406,18 +406,8 @@ h3 a {
   }
   .master-container {
     flex-direction: column;
-    max-width: 100%;;
-  }
-
-  .contact {
-    display: flex;
-    flex-direction: column;
-
-  }
-
-  .header {
-    display: flex;
-    flex-direction: column;
+    max-width: 100%;
+    align-content: center;
   }
 }
 
@@ -495,7 +485,7 @@ h3 a {
     text-align: center;
     background-image: linear-gradient(
       to bottom, transparent, #4c1c46
-    ), url("purple-galaxy-wallpaper.jpg");
+    ), url("images/purple-galaxy-wallpaper.jpg");
   background-size: cover;
   color: #fff;
   text-shadow: 2px 2px 0px #000;
@@ -561,7 +551,7 @@ h3 a {
       to top, transparent, #4c1c46
     ), linear-gradient(
       to bottom, transparent, #000
-    ), url("galaxyblue.jpg");
+    ), url("images/galaxyblue.jpg");
     background-size: cover;
     padding: 200px 0;
     justify-content: space-evenly;
