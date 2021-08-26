@@ -354,16 +354,26 @@ html {
     font-size: 18px;
     font-family: 'Tahoma';
     letter-spacing: 1px;
-    text-align: center;
 }
 
 li {
-  display: inline;
+  list-style: none;
+  text-align: center;
 }
 
 li::before {
   list-style: none;
   content: "★";
+  
+}
+
+li::after {
+  list-style: none;
+  content: "★";
+}
+
+ul {
+padding: 0;
 }
 
 a:hover {
@@ -418,6 +428,7 @@ h3 a {
   color: #a296ca;
   position: fixed;
   width: 100%;
+  text-align: center;
 }
 
 .header-nav > li {
@@ -432,6 +443,11 @@ h3 a {
 .header-nav > li::before {
   content:"";
 }
+
+.header-nav > li::after {
+  content:"";
+}
+
 .header-nav a {
   color: rgb(224, 224, 224);
 }
@@ -450,7 +466,7 @@ h3 a {
 
 .master-container {
     background-color: #4c1c46;
-
+    text-align: center;
 }  
 
 /* ABOUT ME STYLES */
@@ -482,7 +498,6 @@ h3 a {
     ), url("purple-galaxy-wallpaper.jpg");
   background-size: cover;
   color: #fff;
-  align-self: center;
   text-shadow: 2px 2px 0px #000;
   padding: 80px;
   }
