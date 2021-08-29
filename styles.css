@@ -399,18 +399,6 @@ h3 a {
   font-size: 1.5rem;
 }
 
-@media only screen and (max-width: 600px) {
-
-  html {
-    font-size: 14px;
-  }
-  .master-container {
-    flex-direction: column;
-    max-width: 100%;
-    align-content: center;
-  }
-}
-
 /* HEADER & NAV STYLES */
 .header {
   background-color: #000;
@@ -489,7 +477,7 @@ h3 a {
   background-size: cover;
   color: #fff;
   text-shadow: 2px 2px 0px #000;
-  padding: 80px;
+  padding-top: 80px;
   }
 
   .column {
@@ -498,6 +486,10 @@ h3 a {
     flex-basis: 100%;
     flex: 1;
     color: #fff;
+  }
+
+  .column p {
+    padding: 0 20px;
   }
 
 /* PORTFOLIO STYLES */
@@ -533,6 +525,7 @@ h3 a {
 
 .portfolio p {
   font-size: 1.5rem;
+  padding: 0 20px;
 }
 
 .codedanger {
@@ -578,4 +571,46 @@ footer {
   padding: 20px;
   background-color: #000;
   color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+
+  html {
+    font-size: 14px;
+  }
+ .master-container {
+    flex-direction: column;
+    max-width: 100%;
+    align-content: center;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 525px) {
+  .contact {
+    flex-direction: column;
+    align-items: center;  
+    padding: 25px 0;
+}
+
+  .overlay {
+    margin: 25px 0;
+  }
+
+}
+
+@media screen and (max-width: 375px) {
+  .master-container {
+    overflow: scroll;
+    max-width: 100%;
+    min-width: 375px;
+  }
+  footer {
+    min-width: 375px;
+    overflow: scroll;
+    max-width: 100%;
+  }
+
 }
