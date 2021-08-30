@@ -409,9 +409,19 @@ h3 a {
   text-align: center;
 }
 
+.logo {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.logo img {
+  height: 30px;
+}
+
 .header-nav > li {
   display: inline-block;
   margin-left: 1em;
+  padding-bottom: 5px;
 }
 .header-nav > li ~ li {
   border-left: 1px solid #a296ca;
@@ -553,13 +563,13 @@ h3 a {
 .contactimg {
   height: 5rem;
   width: auto;
+  padding: 0;
 }
 
 .overlay {
   background-color: #a296ca;
   border-radius: 5rem;
   height: 5rem;
-  width: auto;
 }
 
 .overlay:hover {
