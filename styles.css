@@ -416,6 +416,7 @@ h3 a {
 
 .logo img {
   height: 30px;
+  display: none;
 }
 
 .header-nav > li {
