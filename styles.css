@@ -412,11 +412,13 @@ h3 a {
 .logo {
   display: inline-block;
   vertical-align: middle;
+  height: 30px;
+  width: auto;
 }
 
 .logo img {
   height: 30px;
-  display: none;
+  width: auto;
 }
 
 .header-nav > li {
@@ -470,7 +472,7 @@ h3 a {
 }
 
 
-.front-end {
+.title-developer {
         margin-top: -20px;
         color: #a296ca;
         text-shadow: 2px 2px 0px #4c1c46;
