@@ -4,20 +4,34 @@
     <title>Lewis Overcast</title>
     <link rel = "icon" type = "image/png" href = "images/developericon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="styles.css" type="text/css" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta charset="utf-8">
   </head>
   <header>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("nav-links");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+      </script>
     <nav>
-      <ul class="nav-links">
-        <div class="logo">
-        <img src="images/developericon.png" />
+        <div class="nav-bar">
+          <img src="images/developericon.png" />
+          <div id="nav-links">
+            <a href="#about-me">About Me</a>
+            <a href="#portfolio">My Portfolio</a>
+            <a href="#contact">Contact Me</a>
+          </div>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
         </div>
-        <li><a href="#about-me">About Me</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
     </nav>
   </header>
   <body>

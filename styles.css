@@ -411,60 +411,61 @@ h3 a {
 }
 
 /* HEADER & NAV STYLES */
-header {
-  background-color: #000;
-  box-shadow: 2px 5px 10px #000;
-  color: #a296ca;
+nav {
   position: fixed;
   width: 100%;
   z-index: 5;
-  text-align: center;
 }
 
-.logo {
-  display: inline-block;
-  vertical-align: middle;
-  height: 30px;
-  width: auto;
-  transition: all 1s;
+.nav-bar {
+  overflow: hidden;
+  background-color: #000;
+  position: relative;
+  box-shadow: 0px 5px 10px #000;
+
 }
 
-.logo:hover {
-  transform: scale(1.5);
+.nav-bar #nav-links {
+  display: none;
 }
 
-.logo img {
-  height: 30px;
-  width: auto;
-}
-
-.nav-links li {
-  display: inline-flex;
-  margin-left: 1em;
-  padding-bottom: 5px;
-}
-
-.nav-links > li ~ li {
-  border-left: 1px solid #a296ca;
-  padding-left: 1em;
-}
-
-.nav-links > li::before {
-  content:"";
-}
-
-.nav-links a {
-  font-size: .5em;
-  font-weight: bold;
+.nav-bar a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
   text-decoration: none;
   text-transform: uppercase;
-  color: rgb(224, 224, 224);
-  transition: all 1s;
+  font-size: 14px;
+  text-align: center;
+  transition: all 700ms;
 }
-.nav-links a:hover,
-.nav-links a:active  {
-  color: #d54aff;
-  transform: scale(1.3);
+
+.nav-bar a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.nav-bar a:hover {
+  background-color: #9da0ff;
+  color: black;
+  transform: scale(1.2);
+}
+
+.nav-bar img {
+  display: block;
+  height: 30px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 10px;
+  transition: all 600ms;
+}
+
+.nav-bar img:hover {
+  transform: scale(1.2);
 }
 
 /* CONTAINER */
@@ -501,8 +502,8 @@ header {
     background-size: cover;
     color: #fff;
     text-shadow: 2px 2px 0px #000;
-    padding-top: 20px;
-  } 
+    padding-top: 25px;
+    } 
 
    .column {
     display: flex;
@@ -510,7 +511,7 @@ header {
     flex-basis: 100%;
     flex: 1;
     color: #fff;
-    padding: 50px 25px;
+    padding: 30px 25px 60px;
     align-self: center;
   }
 
@@ -626,7 +627,7 @@ footer {
     grid-gap: 20px;
   }
 }
-@media screen and (max-width: 525px) {
+@media screen and (max-width: 550px) {
   .contact {
     flex-direction: column;
     align-items: center;  
@@ -635,10 +636,12 @@ footer {
   .overlay {
     margin: 25px 0;
   }
-
+  .nav-links {
+    float: left;
+  }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .master-container {
     overflow: hidden;
     max-width: 100%;
