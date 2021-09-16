@@ -355,16 +355,6 @@ html {
     letter-spacing: 1px;
 }
 
-li {
-  list-style: none;
-}
-
-li::before {
-  list-style: none;
-  content: "★";
-  padding-right: 5px;
-}
-
 a:hover {
   color: #d9cdff;
 }
