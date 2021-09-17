@@ -411,6 +411,7 @@ h3 a {
 }
 
 /* HEADER & NAV STYLES */
+
 nav {
   position: fixed;
   width: 100%;
@@ -437,21 +438,40 @@ nav {
   text-transform: uppercase;
   font-size: 14px;
   text-align: center;
-  transition: all 700ms;
+  transition: all 100ms;
 }
 
 .nav-bar a.icon {
   background: black;
   display: block;
   position: absolute;
+  font-size: 18px;
   right: 0;
   top: 0;
+  transition: all 250ms;
+}
+.nav-bar a.icon:hover {
+  background-color: #000;
+  color: #9da0ff;
+  transform: scale(1.1);
+  animation: spin 2s alternate;
+  z-index: 7;
 }
 
 .nav-bar a:hover {
   background-color: #9da0ff;
   color: black;
-  transform: scale(1.2);
+  transform: scale(1.1);
+  z-index: 8;
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(180deg);
+  }
 }
 
 .nav-bar img {
@@ -467,6 +487,7 @@ nav {
 .nav-bar img:hover {
   transform: scale(1.2);
 }
+
 
 /* CONTAINER */
 
@@ -486,9 +507,9 @@ nav {
 }
 
 .title-2 {
-        margin-top: -20px;
-        color: #a296ca;
-        text-shadow: 2px 2px 0px #4c1c46;
+   margin-top: -20px;
+   color: #a296ca;
+   text-shadow: 2px 2px 0px #4c1c46;
 }
 
 .row {
@@ -526,6 +547,7 @@ nav {
 
   i { 
     font-size: 4rem;
+    text-shadow: 2px 5px 10px #000;
     transition: all 700ms;
   }
 
