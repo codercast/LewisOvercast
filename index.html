@@ -4,14 +4,15 @@
     <title>Lewis Overcast</title>
     <link rel = "icon" type = "image/png" href = "images/developericon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
     <link href="styles.css" type="text/css" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta charset="utf-8">
   </head>
   <header>
     <script>
-      function myFunction() {
+      function dropDownFunction() {
         var x = document.getElementById("nav-links");
         if (x.style.display === "block") {
           x.style.display = "none";
@@ -28,28 +29,32 @@
             <a href="#portfolio">My Portfolio</a>
             <a href="#contact">Contact Me</a>
           </div>
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
+          <a href="javascript:void(0);" class="icon" onclick="dropDownFunction()">
+            <span class="material-icons menu">
+              menu
+            </span>
           </a>
         </div>
     </nav>
   </header>
   <body>
     <div class="master-container">
-      <div class="row">
-        <div class="column">
-          <h1 class=>Lewis Overcast</h1>
-            <h2 class="title-2">Web Developer</h2>    
+      <div class="aboutme-grid">
+        <div class="intro-col">
+          <h1>Lewis Overcast</h1>
+            <h2 class="title-2">Web Developer</h2> 
+            <div class="pic-wrapper">   
               <img class="propic" src="images/ProPic.jpg" att="Lewis Overcast's Portrait">
         </div>
-        <div class="column">
+        </div>
+        <div class="aboutme-col">
           <h2 class="about"><a id="about-me">About Me</a></h2>
             <p>My name is Lewis Overcast and I currently reside in Las Vegas, Nevada. I am a critcal thinker, problem solver 
           and love the aesthetics of building webpages. I am a self-starter and self-motivated individual continually learning the nuances of coding and programming. My passions outside of coding include my love 
           for going on adventures, playing music, and taking nature hikes.</p>
         </div>
       </div>
-          <div class="column">
+          <div class="skillz-col">
           <h3>My Current Technical Skills</h3>
           <div class="skillz">
           <i class="devicon-html5-plain-wordmark" title="HTML5"></i>
@@ -113,9 +118,9 @@
           </div>
         </div>
       </div>    
-    </div>
-  </body>
   <footer>
     <p>Copyright ©2021 Lewis Overcast</p>
   </footer>
+</div>
+</body>
 </html>
