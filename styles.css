@@ -441,9 +441,7 @@ nav {
   transition: all 100ms;
 }
 
-.nav-bar a.icon {
-  background-color: black;
-  display: block;
+.nav-bar .icon {
   position: absolute;
   font-size: 18px;
   color: #FFF;
@@ -451,11 +449,10 @@ nav {
   top: 0;
   transition: all 250ms;
 }
-.nav-bar a.icon:hover {
-  background-color: #000;
+.nav-bar .icon:hover {
   color: #9da0ff;
+  background-color: rgb(255, 255, 255, 0);
   transform: scale(1.1);
-  animation: spin 1s infinite 250ms alternate;
   z-index: 7;
 }
 
@@ -491,6 +488,14 @@ nav {
 
 .nav-bar img:hover {
   transform: scale(1.2);
+}
+
+.menu {
+  display: block;
+}
+
+.x-icon {
+  display: none;
 }
 
 

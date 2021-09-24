@@ -14,10 +14,16 @@
     <script>
       function dropDownFunction() {
         var x = document.getElementById("nav-links");
-        if (x.style.display === "block") {
-          x.style.display = "none";
+        var y = document.getElementById("menu");
+        var z = document.querySelector(".x-icon");
+        if (x.style.display === "block" && y.style.display === "none") {
+          x.style.display = "none",
+          y.style.display = "block",
+          z.style.display = "none";
         } else {
-          x.style.display = "block";
+          x.style.display = "block",
+          y.style.display = "none",
+          z.style.display = "block";
         }
       }
       </script>
@@ -30,9 +36,14 @@
             <a href="#contact">Contact Me</a>
           </div>
           <a href="javascript:void(0);" class="icon" onclick="dropDownFunction()">
-            <span class="material-icons menu">
+            <span class="material-icons" id="menu">
               menu
             </span>
+            <div class="x-icon">
+            <span class="material-icons">
+              highlight_off
+              </span>
+            </div>
           </a>
         </div>
     </nav>
