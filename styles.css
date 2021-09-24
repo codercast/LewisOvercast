@@ -448,6 +448,7 @@ nav {
   right: 0;
   top: 0;
   transition: all 250ms;
+  cursor: pointer;
 }
 .nav-bar .icon:hover {
   color: #9da0ff;
