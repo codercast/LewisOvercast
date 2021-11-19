@@ -11,7 +11,22 @@
     <meta charset="utf-8">
   </head>
   <header>
-    <script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+      $(document).ready(function(){
+        $(window).scroll(function(){
+          $('.fadein').each( function(i){
+
+            var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            if( bottom_of_window > bottom_of_element ){
+                $(this).animate({'opacity':'1'}, 1000);
+            }
+        });
+    });
+});
+
       function dropDownFunction() {
         var x = document.getElementById("nav-links");
         var y = document.getElementById("menu");
@@ -58,16 +73,16 @@
               <img class="propic" src="images/ProPic.jpg" att="Lewis Overcast's Portrait">
         </div>
         </div>
-        <div class="aboutme-col">
+        <div class="aboutme-col fadein">
           <h2 class="about"><a id="about-me">About Me</a></h2>
             <p>My name is Lewis Overcast and I currently reside in Las Vegas, Nevada. I am a critcal thinker, problem solver 
           and love the aesthetics of building webpages. I am a self-starter and self-motivated individual continually learning the nuances of coding and programming. My passions outside of coding include my love 
           for going on adventures, playing music, and taking nature hikes.</p>
         </div>
       </div>
-          <div class="skillz-col">
+          <div class="skillz-col fadein">
           <h3>My Current Technical Skills</h3>
-          <div class="skillz">
+          <div class="skillz fadein">
           <i class="devicon-html5-plain-wordmark" title="HTML5"></i>
           <i class="devicon-css3-plain-wordmark" title="CSS3"></i>
           <i class="devicon-javascript-plain" title="JavaScript"></i>
@@ -83,36 +98,36 @@
           </div>
         </div>
       <div class= "portfolio-container">
-        <div class="row-title">
+        <div class="row-title fadein">
           <h2 class="title"><a id="portfolio">Portfolio</a></h2>
         </div>
       <div class="portfolio-grid">
-        <div>
+        <div class="fadein">
           <h3><a href="http://jammminjammm.surge.sh/" target="_blank">Jammming</h3>
           <img class="codedanger" src="images/jammming.jpg"/></a>  
           <p>A playlist creation app using React.js and Spotify APIs. Deployed on surge.</p>
           </div>
-        <div>
+        <div class="fadein">
         <h3><a href="https://shopcannareps.com" target="_blank">ShopCannaReps.com</h3>
         <img class="codedanger" src="images/cannareps.jpg"/></a>  
         <p>An ecommerce website, I worked on all the front-end with HTML, CSS, and some Javascript. I also worked on some of the back-end with PHP.</p>
         </div>
-        <div>
+        <div class="fadein">
         <h3><a href="https://codercast.github.io/aSampleWebsite/"target="_blank">Learn Enough</h3>
         <img class= "codedanger" src="images/codedanger.jpg"/></a>
         <p>A Sample Website using HTML and CSS.</p>
       </div>
-       <div>
+      <div class="fadein">
           <h3><a href="https://codercast.github.io/CrazyCatLogin/" target="_blank">Crazy Cat Login</h3>
           <img class= "codedanger" src="images/crazycatlogin.jpg"/></a>
           <p>A responsive and interactive login page using HTML and CSS.</p>
           </div>
-          <div>
+       <div class="fadein">
           <h3><a href="https://codercast.github.io/NumberGuesser/" target="_blank">Number Guessing Game</h3>
           <img class= "codedanger" src="images/numberguesser.jpg"/></a>
           <p>A random number guesser that keeps score of the winner, made using Javascript, CSS, and HTML.</p>
        </div>
-        <div>
+       <div class="fadein">
         <h3><a href="https://codercast.github.io/PupSpa/"target="_blank">Pup Spa</h3>
         <img class= "codedanger" src="images/pupSpa.jpg"/></a>
         <p>A sample website using CSS grid and HTML.</p>
